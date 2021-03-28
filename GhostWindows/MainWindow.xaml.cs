@@ -24,5 +24,20 @@ namespace GhostWindows
         {
             InitializeComponent();
         }
+
+        private void ShowButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Windows.OfType<Window>().FirstOrDefault()?.Show();
+        }
+
+        private void HideButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Windows.OfType<Window>().FirstOrDefault()?.Hide();
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

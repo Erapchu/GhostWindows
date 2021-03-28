@@ -10,11 +10,21 @@
         <Grid.CacheMode>
             <BitmapCache />
         </Grid.CacheMode>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
         <Button
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Width="auto"
-            Height="50"
-            Content="Click to check"/>
+            Content="Show first window"
+            Click="ShowButton_Click" />
+        <Button
+            Grid.Column="1"
+            Content="Hide first window"
+            Click="HideButton_Click" />
+        <Button
+            Grid.Column="2"
+            Content="Close application"
+            Click="CloseButton_Click" />
     </Grid>
 </Window>
