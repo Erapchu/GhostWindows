@@ -20,9 +20,10 @@ namespace GhostWindows
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(int number)
         {
             InitializeComponent();
+            Title = $"MainWindow {number}";
         }
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)

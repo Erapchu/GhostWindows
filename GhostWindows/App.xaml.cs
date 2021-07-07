@@ -18,10 +18,12 @@ namespace GhostWindows
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            var window1 = new MainWindow();
+            var window1 = new MainWindow(1);
             window1.Show();
-            var window2 = new MainWindow();
+            var window2 = new MainWindow(2);
             window2.Show();
+            var window3 = new MainWindow(3);
+            window3.Show();
 
             var source = HwndSource.FromHwnd(new WindowInteropHelper(window2).Handle);
             source.AddHook(new HwndSourceHook(WndProc));
