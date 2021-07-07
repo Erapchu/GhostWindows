@@ -39,5 +39,13 @@ namespace GhostWindows
         {
             Application.Current.Shutdown();
         }
+
+        private void SwitchCacheModeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (RootGrid.CacheMode is null)
+                RootGrid.CacheMode = new BitmapCache();
+            else
+                RootGrid.CacheMode = null;
+        }
     }
 }
