@@ -26,6 +26,7 @@ namespace GhostWindows
             var source = HwndSource.FromHwnd(new WindowInteropHelper(window2).Handle);
             source.AddHook(new HwndSourceHook(WndProc));
 
+            // Switch CacheMode in the second window
             // Then tap Ctrl + ALt + Del or Win + L
 
             base.OnStartup(e);
